@@ -39,13 +39,13 @@ defmodule Gateway.Session do
   end
 
   def handle_info({:send_leaderboard, data}, state) do
-    send(state.linked_socket, {:send_op, 1, data})
+    send(state.linked_socket, {:send_op, 2, data})
 
     {:noreply, state}
   end
 
   def handle_info({:send_post, data}, state) do
-    send(state.linked_socket, {:send_op, 2, data})
+    send(state.linked_socket, {:send_op, 3, data})
 
     {:noreply, state}
   end
