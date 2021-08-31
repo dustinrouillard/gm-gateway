@@ -3,7 +3,7 @@ defmodule Gateway.Metrics.Exporter do
   import Plug.Conn
 
   path = "/metrics"
-  registry = :dstn_gateway_registry
+  registry = :gm_dstn_gateway_registry
 
   def init(_opts) do
   end
